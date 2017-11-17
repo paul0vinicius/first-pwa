@@ -21,6 +21,9 @@ const Page = ({ title }) => (
       <p>
         <Link to="/settings">Settings</Link>
       </p>
+      <p>
+        <Link to="/profile">Profile</Link>
+      </p>
     </div>
 );
 
@@ -36,6 +39,10 @@ const Settings = (props) => (
   <Page title="Settings"/>
 );
 
+const Profile = (props) => (
+  <Page title="Profile"/>
+);
+
 class App extends Component {
   render() {
     return (
@@ -43,6 +50,7 @@ class App extends Component {
         <Route path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/settings" component={Settings}/>
+        <Route path="/profile" component={Profile}/>
       </Router>
     );
   }
